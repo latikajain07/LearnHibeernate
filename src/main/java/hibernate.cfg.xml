@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+	<hibernate-configuration>
+		<session-factory>
+		
+			<!--DATABASE CONNECTION SETTINGS-->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hschema</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+        
+         <!--SQL DIALECT-->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        
+        <!--DROP AND RECREATE THE DATABASE SCHEMA ON STARTUP-->
+        <property name="hbm2ddl.auto">update</property>
+        
+        <!--ECHO ALL EXECUTED SQL TO STANDARD OUT-->
+        <property name="show_sql">true</property>
+        
+        <mapping class = "com.tamtam.learn_hibernateee.Student"></mapping>
+		
+		
+		
+		</session-factory>	
+	</hibernate-configuration>
